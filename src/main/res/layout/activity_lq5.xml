@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+
+        android:background="@color/title_black_tranc">
+
+        <ImageView
+            android:layout_width="@dimen/x18"
+            android:layout_height="@dimen/x18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x8"
+            android:background="@drawable/ico_back"
+            android:padding="@dimen/x3" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="统计管理模块"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x8" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/x6">
+
+                <ImageView
+                    android:layout_width="@dimen/x18"
+                    android:layout_height="@dimen/x18"
+                    android:background="@drawable/wt_search" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/x8"
+                    android:text="查询条件"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="检测单位"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:id="@+id/et_choose_agent_grade"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/iv_arrow"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="重庆市公路工程总公司"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="检测时间"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/x120"
+                        android:layout_height="@dimen/x28"
+                        android:background="@drawable/cir_reg_gray"
+                        android:paddingLeft="@dimen/x6"
+                        android:paddingRight="@dimen/x6">
+
+                        <ImageView
+                            android:id="@+id/iv_calendar"
+                            android:layout_width="@dimen/x15"
+                            android:layout_height="@dimen/x15"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ico_calendar" />
+
+                        <EditText
+                            android:layout_width="@dimen/x120"
+                            android:layout_height="match_parent"
+                            android:layout_toLeftOf="@id/iv_calendar"
+                            android:background="@null"
+                            android:editable="false"
+                            android:hint="2017-9-13"
+                            android:paddingRight="@dimen/x6"
+                            android:textColor="@color/main"
+                            android:textColorHint="@color/tv_produce_naem"
+                            android:textSize="14sp"></EditText>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="@dimen/x8"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/x2"
+                        android:text="-"
+                        android:textColor="@color/main"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/x120"
+                        android:layout_height="@dimen/x28"
+                        android:background="@drawable/cir_reg_gray"
+                        android:paddingLeft="@dimen/x6"
+                        android:paddingRight="@dimen/x6">
+
+                        <ImageView
+                            android:id="@+id/iv_calendar2"
+                            android:layout_width="@dimen/x15"
+                            android:layout_height="@dimen/x15"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ico_calendar" />
+
+                        <EditText
+                            android:layout_width="@dimen/x120"
+                            android:layout_height="match_parent"
+                            android:layout_toLeftOf="@id/iv_calendar2"
+                            android:background="@null"
+                            android:editable="false"
+                            android:hint="2017-9-13"
+                            android:paddingRight="@dimen/x6"
+                            android:textColor="@color/main"
+                            android:textColorHint="@color/tv_produce_naem"
+                            android:textSize="14sp"></EditText>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="试验项目"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow1"
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/iv_arrow1"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="混凝土抗压"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="检测参数"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow2"
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/iv_arrow2"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="抗压强度"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/x6">
+
+                <ImageView
+                    android:id="@+id/iv11"
+                    android:layout_width="@dimen/x15"
+                    android:layout_height="@dimen/x15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/brand_detail_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x8"
+                    android:layout_toLeftOf="@id/iv11"
+                    android:text="高级选项"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="检验类别"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow3"
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/iv_arrow3"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="全部"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="委托单位"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow4"
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/iv_arrow4"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint=""
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="工程项目"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint=""
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x6"
+                android:layout_marginTop="@dimen/x6">
+
+                <TextView
+                    android:id="@+id/tv_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/cir_search"
+                    android:paddingBottom="@dimen/x4"
+                    android:paddingLeft="@dimen/x12"
+                    android:paddingRight="@dimen/x12"
+                    android:paddingTop="@dimen/x4"
+                    android:text="清空条件"
+                    android:textColor="@color/red"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/x8"
+                    android:layout_toLeftOf="@id/tv_clear"
+                    android:background="@drawable/cir_search"
+                    android:paddingBottom="@dimen/x4"
+                    android:paddingLeft="@dimen/x12"
+                    android:paddingRight="@dimen/x12"
+                    android:paddingTop="@dimen/x4"
+                    android:text="查询"
+                    android:textColor="@color/red"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <!-- bingtu  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/x6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="检测数据合格率分析"
+                    android:textColor="@color/tv_produce_naem"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/x96"
+                        android:layout_height="@dimen/x96"
+                        android:background="@drawable/circle_bg" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x12"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/x6"
+                                android:layout_height="@dimen/x6"
+                                android:background="#F35846" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/x6"
+                                android:text="合格组数"
+                                android:textColor="@color/tv_produce_naem"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/x6"
+                                android:layout_height="@dimen/x6"
+                                android:background="#188FDF" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/x6"
+                                android:text="不合格组数"
+                                android:textColor="@color/tv_produce_naem"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x12"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x6"
+                            android:text="组数合计：16组"
+                            android:textColor="@color/main"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x6"
+                            android:text="合格组数：3组"
+                            android:textColor="@color/main"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x6"
+                            android:text="合 格 率：19.75%"
+                            android:textColor="@color/main"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/x6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="检验值走势图"
+                    android:textColor="@color/tv_produce_naem"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/x96"
+                        android:layout_height="@dimen/x96"
+                        android:layout_marginLeft="@dimen/x12"
+                        android:background="@drawable/zhe_bg" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/x6">
+
+                        <ImageView
+                            android:layout_width="@dimen/x6"
+                            android:layout_height="@dimen/x6"
+                            android:background="#188FDF" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x6"
+                            android:text="抗压强度"
+                            android:textColor="@color/tv_produce_naem"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x6"
+                android:text="分析项目和分析参数设置"
+                android:textColor="@color/tv_produce_naem"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/x8">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divide_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:background="#eeeeee"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="分析项目名称"
+                        android:textColor="@color/main"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="备注"
+                        android:textColor="@color/main"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="操作"
+                        android:textColor="@color/main"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divide_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="混凝土抗压"
+                        android:textColor="@color/tv_produce_naem"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/x6"
+                        android:text=""
+                        android:textColor="@color/tv_produce_naem"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="@dimen/x15"
+                            android:layout_height="@dimen/x15"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ico_delete" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divide_gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/x1">
+
+                        <ImageView
+                            android:layout_width="@dimen/x11"
+                            android:layout_height="@dimen/x11"
+                            android:background="@drawable/add" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/x2"
+                            android:text="新增行"
+                            android:textColor="@color/main"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/ll2"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignTop="@id/ll2"
+                        android:background="@color/divide_gray" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/ll2"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/ll2"
+                        android:background="@color/divide_gray" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divide_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/x8">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divide_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="9">
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="资质"
+                        android:textColor="@color/main"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="大类"
+                        android:textColor="@color/main"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="项目名称"
+                        android:textColor="@color/main"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="指标名称"
+                        android:textColor="@color/main"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="操作"
+                        android:textColor="@color/main"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divide_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="9">
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="公路"
+                        android:textColor="@color/tv_produce_naem"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="混凝土"
+                        android:textColor="@color/tv_produce_naem"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:singleLine="true"
+                        android:text="水泥混凝土抗压强度试验(圆柱体)"
+                        android:textColor="@color/tv_produce_naem"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:singleLine="true"
+                        android:text="混凝土抗压强度(圆柱体)"
+                        android:textColor="@color/tv_produce_naem"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="@dimen/x15"
+                            android:layout_height="@dimen/x15"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ico_delete" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divide_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="9">
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="公路"
+                        android:textColor="@color/tv_produce_naem"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:text="混凝土"
+                        android:textColor="@color/tv_produce_naem"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:singleLine="true"
+                        android:text="水泥混凝土抗压强度试验(圆柱体)"
+                        android:textColor="@color/tv_produce_naem"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="@dimen/x6"
+                        android:singleLine="true"
+                        android:text="混凝土抗压强度(圆柱体)"
+                        android:textColor="@color/tv_produce_naem"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="@dimen/x15"
+                            android:layout_height="@dimen/x15"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ico_delete" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divide_gray" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divide_gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/x1">
+
+                        <ImageView
+                            android:layout_width="@dimen/x11"
+                            android:layout_height="@dimen/x11"
+                            android:background="@drawable/add" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/x2"
+                            android:text="新增行"
+                            android:textColor="@color/main"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/ll5"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignTop="@id/ll5"
+                        android:background="@color/divide_gray" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@id/ll5"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/ll5"
+                        android:background="@color/divide_gray" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divide_gray" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

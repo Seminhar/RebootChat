@@ -1,0 +1,2129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+        android:background="@color/title_black_tranc">
+
+        <ImageView
+            android:layout_width="@dimen/x18"
+            android:layout_height="@dimen/x18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x8"
+            android:background="@drawable/ico_back"
+            android:padding="@dimen/x3" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="检测信息"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/x8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x6">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/title_black_tranc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/white"
+                    android:padding="@dimen/x6"
+                    android:text="水泥试验"
+                    android:textColor="@color/title_black_tranc"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="检测项目"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/x250"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:id="@+id/et_choose_agent_grade"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/iv_arrow"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="水泥试验"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="取样单位"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="@dimen/x250"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint="某建筑公司"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x3"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="取样地点"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+
+                <RelativeLayout
+                    android:layout_width="@dimen/x250"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:id="@+id/iv_location"
+                        android:layout_width="@dimen/x15"
+                        android:layout_height="@dimen/x15"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_location" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/iv_location"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="某建筑工地"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x3"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="单位工程"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="@dimen/x250"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint=""
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x3"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="工程部位"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="@dimen/x250"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint=""
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="见证单位"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="@dimen/x250"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint=""
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x3"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="试样名称"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="@dimen/x250"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint="42.5"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x3"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text=" 取 样 人 "
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="@dimen/x250"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint="李四"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x3"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="取样时间"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/x250"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:id="@+id/iv_calendar"
+                        android:layout_width="@dimen/x15"
+                        android:layout_height="@dimen/x15"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_calendar" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/iv_calendar"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="2017-9-13"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x3"
+                    android:text="*"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="分项工程"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint=""
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="工程用途"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint=""
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text=" 见 证 人 "
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint="李四"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="   备  注   "
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint=""
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x6">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/title_black_tranc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/white"
+                    android:padding="@dimen/x6"
+                    android:text="样品属性"
+                    android:textColor="@color/title_black_tranc"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/x208"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/x12"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x80"
+                    android:layout_height="wrap_content"
+                    android:background="#eeeeee"
+                    android:gravity="center"
+                    android:padding="@dimen/x6"
+                    android:text="生产厂家"
+                    android:textColor="@color/main"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="@dimen/x128"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/x6"
+                    android:text="A厂家"
+                    android:textColor="@color/tv_produce_naem"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/x208"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x80"
+                    android:layout_height="wrap_content"
+                    android:background="#eeeeee"
+                    android:gravity="center"
+                    android:padding="@dimen/x6"
+                    android:text="代表数量"
+                    android:textColor="@color/main"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="@dimen/x128"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/x6"
+                    android:text="2"
+                    android:textColor="@color/tv_produce_naem"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/x208"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x80"
+                    android:layout_height="wrap_content"
+                    android:background="#eeeeee"
+                    android:gravity="center"
+                    android:padding="@dimen/x6"
+                    android:text="养护条件"
+                    android:textColor="@color/main"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="@dimen/x128"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/x6"
+                    android:text=""
+                    android:textColor="@color/tv_produce_naem"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/x208"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x80"
+                    android:layout_height="wrap_content"
+                    android:background="#eeeeee"
+                    android:gravity="center"
+                    android:padding="@dimen/x6"
+                    android:text="生产批次"
+                    android:textColor="@color/main"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="@dimen/x128"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/x6"
+                    android:text="001"
+                    android:textColor="@color/tv_produce_naem"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/x208"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x80"
+                    android:layout_height="wrap_content"
+                    android:background="#eeeeee"
+                    android:gravity="center"
+                    android:padding="@dimen/x6"
+                    android:text="生产日期"
+                    android:textColor="@color/main"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="@dimen/x128"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/x6"
+                    android:text="2017年9月13日"
+                    android:textColor="@color/tv_produce_naem"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/x208"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/x80"
+                    android:layout_height="wrap_content"
+                    android:background="#eeeeee"
+                    android:gravity="center"
+                    android:padding="@dimen/x6"
+                    android:text="出厂编号"
+                    android:textColor="@color/main"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="@dimen/x128"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/x6"
+                    android:text=""
+                    android:textColor="@color/tv_produce_naem"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/x208"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <!-- D -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/x12"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/x2"
+                    android:text="检测参数"
+                    android:textColor="@color/main"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/x2"
+                    android:text="检测依据"
+                    android:textColor="@color/main"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/x2"
+                    android:text="评定标准"
+                    android:textColor="@color/main"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/x2"
+                    android:text="单价(元)"
+                    android:textColor="@color/main"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/x2"
+                    android:text="单位"
+                    android:textColor="@color/main"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/x2"
+                    android:text="数量"
+                    android:textColor="@color/main"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/x2"
+                    android:text="金额(元)"
+                    android:textColor="@color/main"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="水泥密度"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="《》"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="《》"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="90.00"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint=""
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="1"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="0.00"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="凝结时间"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="《》"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="《》"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="90.00"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint=""
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="0.00"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="安定性"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="《》"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="《》"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="90.00"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint=""
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="1"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="0.00"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="标准密度用水量"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="《》"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="《》"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="90.00"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint=""
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="1"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="0.00"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="硅砂流动度"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="《》"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="《》"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="90.00"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint=""
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="1"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="0.00"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="损失量"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="《》"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="《》"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="90.00"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint=""
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:hint="0.00"
+                    android:singleLine="true"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/red"
+                    android:textSize="10sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:id="@+id/ll2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/x1">
+
+                    <ImageView
+                        android:layout_width="@dimen/x11"
+                        android:layout_height="@dimen/x11"
+                        android:background="@drawable/add" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/x2"
+                        android:text="新增行"
+                        android:textColor="@color/main"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@id/ll2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@id/ll2"
+                    android:background="@color/divide_gray" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@id/ll2"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/ll2"
+                    android:background="@color/divide_gray" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x6">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/title_black_tranc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/white"
+                    android:padding="@dimen/x6"
+                    android:text="附加费用"
+                    android:textColor="@color/title_black_tranc"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/x8"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/x2"
+                    android:text="附加费"
+                    android:textColor="@color/main"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/x2"
+                    android:text="单价(元)"
+                    android:textColor="@color/main"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/x2"
+                    android:text="单位"
+                    android:textColor="@color/main"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/x2"
+                    android:text="数量"
+                    android:textColor="@color/main"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/x2"
+                    android:text="金额(元)"
+                    android:textColor="@color/main"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="true"
+                    android:gravity="center"
+                    android:hint="人工费"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="13sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="true"
+                    android:gravity="center"
+                    android:hint="100.00"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="13sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="true"
+                    android:gravity="center"
+                    android:hint="某一业务"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="13sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="true"
+                    android:gravity="center"
+                    android:hint="2"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="13sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="true"
+                    android:gravity="center"
+                    android:hint="200.00"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="13sp"></EditText>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divide_gray" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x12"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="附加费用合计(元)"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint="¥200.00"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="检测费用合计(元)"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint="¥330.00"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="费用总计(元)"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint="¥530.00"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

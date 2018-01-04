@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+        android:background="@color/title_black_tranc">
+
+        <ImageView
+            android:layout_width="@dimen/x18"
+            android:layout_height="@dimen/x18"
+            android:background="@drawable/ico_back"
+            android:padding="@dimen/x3"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x8"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="委托信息"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x8"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/x8">
+
+            <!-- 工具栏 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/x18"
+                        android:layout_height="@dimen/x18"
+                        android:background="@drawable/wt_add"
+                        android:layout_margin="@dimen/x1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/x6"
+                        android:text="增加委托"
+                        android:textColor="@color/main"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/x18"
+                        android:layout_height="@dimen/x18"
+                        android:background="@drawable/wt_copy"
+                        android:layout_margin="@dimen/x1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/x6"
+                        android:text="复制委托"
+                        android:textColor="@color/main"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/x18"
+                        android:layout_height="@dimen/x18"
+                        android:background="@drawable/wt_delete"
+                        android:layout_margin="@dimen/x1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/x6"
+                        android:text="删除委托"
+                        android:textColor="@color/main"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/x18"
+                        android:layout_height="@dimen/x18"
+                        android:background="@drawable/wt_unused"
+                        android:layout_margin="@dimen/x1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/x6"
+                        android:text="作废委托"
+                        android:textColor="@color/main"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginTop="@dimen/x8">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/x18"
+                        android:layout_height="@dimen/x18"
+                        android:background="@drawable/wt_search"
+                        android:layout_margin="@dimen/x1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/x6"
+                        android:text="查找"
+                        android:textColor="@color/main"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/x18"
+                        android:layout_height="@dimen/x18"
+                        android:background="@drawable/wt_print"
+                        android:layout_margin="@dimen/x1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/x6"
+                        android:text="打印委托单"
+                        android:textColor="@color/main"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/x18"
+                        android:layout_height="@dimen/x18"
+                        android:background="@drawable/wt_finish"
+                        android:layout_margin="@dimen/x1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/x6"
+                        android:text="完成委托"
+                        android:textColor="@color/main"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/x18"
+                        android:layout_height="@dimen/x18"
+                        android:background="@drawable/wt_list"
+                        android:layout_margin="@dimen/x1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/x6"
+                        android:text="收样列表"
+                        android:textColor="@color/main"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="委托日期"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:id="@+id/et_choose_agent_grade"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/iv_arrow"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="2017年9月13"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="委托单位"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint=""
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="委托编号"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint=""
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="检测类别"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="委托检验"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="送样单位"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="海特科技"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="送样人"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="张三"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="受检单位"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="海特科技"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="测后样品处理方式"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="保存于检测中心"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="报告交接方式"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="邮寄"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="要求报告完成日期"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="2017年9月13"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="资质类型"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="公路"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="工程项目"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="项目3"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="检测编号"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:hint=""
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6"
+                    android:textColor="@color/main"
+                    android:textColorHint="@color/tv_produce_naem"
+                    android:textSize="14sp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="预约时间"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="2017年9月13"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="送样时间"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="2017年9月13"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="送样人电话"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="15888888888"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="缴费单位"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="海特科技"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="样品保存月数"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint=""
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="邮寄地址"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint=""
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x6"
+                    android:text="收样人"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/cir_reg_gray"
+                    android:paddingLeft="@dimen/x6"
+                    android:paddingRight="@dimen/x6">
+
+                    <ImageView
+                        android:layout_width="@dimen/x6"
+                        android:layout_height="@dimen/x6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ico_choose_arrow" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:editable="false"
+                        android:hint="系统体验师"
+                        android:paddingRight="@dimen/x6"
+                        android:textColor="@color/main"
+                        android:textColorHint="@color/tv_produce_naem"
+                        android:textSize="14sp"></EditText>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

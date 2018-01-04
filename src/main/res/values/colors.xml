@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="divide_gray" >#dad9dc</color>
+    <color name="white" >#ffffff</color>
+    <color name="main" >#1b1a1a</color>
+    <color name="tv_produce_naem" >#868688</color>
+    <color name="hint_tranc" >#9978a79d</color>
+    <color name="hint" >#78a79d</color>
+    <color name="comm_gray" >#f2f2f2</color>
+    <color name="gray" >#eeeeee</color>
+    <color name="title_black_tranc" >#2F3F9E</color>
+    <color name="red" >#99ff0000</color>
+    <color name="login_white_bg" >#66ffffff</color>
+    <color name="golobe" >#a58d50</color>
+    <color name="fuc_gray" >#DDDFDE</color>
+</resources>
